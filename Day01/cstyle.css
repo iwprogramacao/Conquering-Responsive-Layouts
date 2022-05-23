@@ -1,0 +1,29 @@
+/* Challenge
+A box, filled with text that's going to half of the box
+The text can't overflow the bottom
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  background: #23424a;
+  
+  margin: 0 auto;
+  width: 80%;
+  
+  padding: 2em;
+  
+}
+
+p, h3 {
+  color: #fff;  
+  width: 50%;
+
+}

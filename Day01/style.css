@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.parent {
+  background-color: #23424a;
+  padding: 50px;
+}
+
+.child {
+  background-color: #38cfd9;
+
+  /* Normally don't include a height, this is just to get started to this example */
+  height: 250px;
+}
+
+
+
+/* Lesson 01
+
+.parent {
+  background-color: #23424a;
+  padding: 50px;
+
+  width: 900px; 
+  margin: 0 auto;
+}
+
+This makes the parent element to go in the center by margin auto and defines a width fixed, but
+talking about responsiveness, this is a bad practice, because if even you haven't a single CSS line, you
+will have a responsive website and the example, when get smaller than 900px, we get side scrolling.
+
+This leads us to think what's is the default behavior of an element.
+When we talk about BLOCK LEVEL ELEMENTS (headings for paragraphs, divs...), they have a WIDTH BY 100%
+'100% OF WHAT?' 100% of the PARENT! Whatever the parent element is.
+So the .child has 100% of the .parent, and the .parent has 100% of the body, and the body have the size of the viewport.
+
+If we need to set a smaller size, we go with percentage widths. like:
+
+  width: 80%
+
+
+*/
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.parent {
+  background-color: #23424a;
+  padding: 50px;
+  margin: 0 auto;
+  width: 80%;
+  
+}
+
+.child {
+  height: 250px;
+  background-color: #38cfd9;
+  width: 50%;
+}
+
+/* Lesson 02
+
+In this lesson, we put a fixed width to the child element to see her behavior, and we see that at some point
+the .child overflows the parent element and we are back to side scrolling.
+In another point, we are adding some texts in the child to see the behavior when shrink down and, if we set a
+percentage width, the text will adapt and fill the element but will overflows the bottom because of the height.
+This is the problem by setting fixed sizes.
+
+.child {
+  width: 50%;
+}
+
+On this example, we can know exactly how much is the child size, because is always a relationship between them.
+The smaller the parent goes, smaller the child will be.
+TIPS: A lot of the time, we don't even need to set a width in a child, really dependent on the context and
+situation.
+
+*/
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  background-color: #23424a;
+  color: #fff;
+
+  width: 80%;
+  margin: 0 auto;
+
+  height : 250px;
+}
+
+/* Lesson 3
+
+Again, the problem defining a height is because, when we shrink the page, the text (or whatever we have)
+will overflows, and in the case of the text, it will camouflage with the white body that we have on.
+ALWAYS REMEMBER: If the website isn't responsive, is cause by YOU!
+
+So, to solve this problem if we need a space below the text or 'more background', we can set padding parameters
+
+  padding: 5em;
+
+I've already talked bout fixed elements?
+'Talking about responsiveness, makes sense to use responsive elements' so instead using px,
+we can use EM and REM.
+In the case, if we don't change the font-size, 5em = 80px, so 1em = 16px.
+
+Default font-size of a browser tends to be 16px.
+EM is always looking at the font-size of the container.
+Differences between EM and REM - https://www.youtube.com/watch?v=_-aDOAMmDHI
+*/ 
+
+.container {
+  background-color: #23424a;
+  color: #fff;
+
+  width: 80%;
+  margin: 0 auto;
+
+  height: auto;
+  padding: 5em;
+}
